@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Variáveis</title>
+</head>
+<body>
+
+  <script>
+
+    let num1 = 10;
+    let num2 = 3.5;
+    let num3 = 9007199254740992n;
+    let nome = "Virmerson";
+    let status = true;
+    let frutas = ["banana", "laranja", "abacaxi"];
+    let pessoa = {
+      nome: "Virmerson",
+      idade: 38,
+      email: "virmerson@gmail.com",
+      cidade: "Campo Grande",
+      estado: "MS",
+      brasileiro: true
+    }
+    let x;
+    let y = null;
+
+    console.log(num1);
+    console.log(typeof num1 + "\n\n");  /* number */
+
+    console.log(num2);
+    console.log(typeof num2 + "\n\n");  /* number */
+
+    /* BigInt é um objeto nativo que fornece um modo de representar números inteiros maiores que 2**53, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo Number. */
+    /* Um BigInt é criado adicionando n ao final de um inteiro literal — 10n — ou chamando a função BigInt(). */
+
+    console.log(num3);
+    console.log(typeof num3 + "\n\n");  /* number */
+
+    console.log(nome);
+    console.log(typeof nome + "\n\n");  /* string */
+
+    console.log(status);
+    console.log(typeof status + "\n\n");  /* boolen */
+
+    console.log(frutas);
+    console.log(typeof frutas + "\n\n");  /* object */
+
+    console.log(pessoa);
+    console.log(typeof pessoa + "\n\n");  /* object */
+
+    console.log(x);
+    console.log(typeof x + "\n\n");  /* undefined */
+
+    console.log(y);
+    console.log(typeof y + "\n\n");  /* object */
+
+    console.log("======================\n");
+
+    console.log(pessoa.email);
+    console.log(typeof pessoa.email + "\n\n");  /* string */
+
+    console.log(pessoa.idade);
+    console.log(typeof pessoa.idade + "\n\n");  /* number */
+
+  </script>
+
+</body>
+</html>

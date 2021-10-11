@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar objetos</title>
+</head>
+<body>
+
+  <script>
+
+    function Matematica1() {
+      this.somar = function(n1, n2){
+        return n1 + n2;
+      }
+    }
+
+    class Matematica2 {
+      somar(n1, n2){
+        return n1 + n2;
+      }
+    }
+
+    let matematica3 = {
+      somar: function(n1, n2){
+        return n1 + n2;
+      }
+    }
+
+    let matematica4 = {
+      somar(n1, n2){
+        return n1 + n2;
+      }
+    }
+
+    let m1 = new Matematica1();
+    console.log(m1.somar(15, 53));
+
+    let m2 = new Matematica2();
+    console.log(m2.somar(65, 28));
+
+    console.log(matematica3.somar(13, 40));
+
+    console.log(matematica4.somar(86, 14));
+
+  </script>
+
+</body>
+</html>

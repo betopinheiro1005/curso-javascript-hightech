@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>async/await</title>
+</head>
+<body>
+
+  <script>
+
+    function dividir(n1, n2){
+      return new Promise((resolve, reject) => {
+        let resultado = n1 / n2;
+        if(n2 != 0){
+          resolve(resultado);
+        } else {
+          reject("Impossível dividir por zero!");
+        }
+      });
+    }
+
+    function calcularJuros(r){
+      return new Promise((resolve, reject) => {
+        let j = r + (r * 0.1);
+        if(j >= 0){
+          resolve(j);
+        } else {
+          reject("Não há juros negativos!");
+        }
+      })
+    }
+
+    function mensagem(r){
+      return console.log("Total com juros: " + r);
+    }
+
+    function erro(e){
+       return console.log(e);
+    }
+
+
+    // dividir(100, 2)
+    // .then(calcularJuros)
+    // .then(mensagem)
+    // .catch(erro);
+
+    async function calc(){
+      let divisao = await dividir(100, 2);
+      let juros = await calcularJuros(divisao);
+      console.log(divisao);
+      mensagem(juros);
+    }
+
+    calc();
+
+  </script>
+</body>
+</html>

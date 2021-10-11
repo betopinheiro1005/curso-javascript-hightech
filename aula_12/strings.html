@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings</title>
+</head>
+<body>
+
+  <script>
+
+    /* template literal */
+
+    let nome = "Virmerson";
+    let sobrenome = "Bento dos Santos";
+    let empresa = "High Tech";
+    let curso = "Javascript Vanilla";
+
+    console.log(`
+    Nome: ${nome}
+    Sobrenome: ${sobrenome}
+    Empresa: ${empresa}
+    Curso: ${curso}
+    `);
+
+    /* método charAt */
+
+    console.log(nome.charAt(2));  /* retorna r */
+
+    /* método indexOf */
+
+    console.log(nome.indexOf('r'));  /* retorna 2 */
+    console.log(nome.indexOf('t'));  /* não existe: retorna -1 */
+
+    /* método lastIndexOf */
+
+    console.log(nome.lastIndexOf('r'));  /* retorna 5 */
+
+    /* método concat */
+
+    console.log(nome.concat(' ', sobrenome));
+
+    /* método endsWith */
+
+    let texto1 = 'Qual é sua cor preferida?';
+    let texto2 = 'Tenha um ótimo dia!';
+
+    if(texto1.endsWith('?')){
+      console.log(texto1 + " = Pergunta");
+    }
+
+    if(texto2.endsWith('!')) {
+      console.log(texto2 + " = Exclamação");
+    }
+
+  </script>
+</body>
+</html>

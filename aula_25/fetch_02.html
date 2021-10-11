@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img{
+      margin-right: 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  </style>
+  <title>Fetch usando async/await</title>
+</head>
+<body onload="carregarGif()">
+
+  <script>
+    async function carregarGif(){
+      let api = "https://api.giphy.com/v1/gifs/search";
+      let key = "Y6TNQR2yqHCTAPRHmfZVDeGIn0Q7DJBl";
+      let q = "Bruce Lee";
+      let limit = 5;
+      let response = await fetch(`${api}?api_key=${key}&q=${q}&limit=${limit}`);
+      let json = await response.json();
+      gerarImagem(json);
+    }
+
+    function gerarImagem(json){
+      for(let i = 0; i < json.data.length; i++){
+        let url = json.data[i].images.original.url;
+        let img = document.createElement("img");  /* <img> */
+        img.src = url;  /* <img src='foto.gif' */
+        document.body.appendChild(img);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POO - Funções construtoras</title>
+</head>
+<body>
+
+  <script>
+
+    function criarPessoa(nome = "João"){
+      let pessoa = {
+        nome: nome
+      }
+      return pessoa;
+    }
+
+    let p1 = criarPessoa();
+    console.log(p1);
+
+    let p2 = criarPessoa("José");
+    console.log(p2);
+
+    let p3 = criarPessoa("Maria");
+    console.log(p3);
+
+  </script>
+
+</body>
+</html>

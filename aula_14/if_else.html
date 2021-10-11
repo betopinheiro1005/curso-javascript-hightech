@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condicional if - else if - else</title>
+</head>
+<body>
+
+  <script>
+
+    let idade = 12;
+    console.log(idade + " anos: " + isMaior(idade));
+
+    idade = 21;
+    console.log(idade + " anos: " + isMaior(idade));
+
+    function isMaior(idade){
+      if(idade >= 18)
+        return "É maior de idade";
+      return "Não é maior de idade";
+    }
+
+    console.log("-----------------------------");
+
+    /* ============================================= */
+
+    let genero;
+    defineGenero(genero);
+
+    genero = 'M';
+    defineGenero(genero);
+
+    genero = 'F';
+    defineGenero(genero);
+
+    function defineGenero(genero){
+      if(genero === 'M'){
+        console.log(genero + ": Sexo Masculino");
+      } else if(genero === 'F') {
+        console.log(genero + ": Sexo Feminino");
+      } else {
+        console.log(genero + ": Sexo indefinido");
+      }
+    }
+
+    console.log("-----------------------------");
+
+    /* ============================================= */
+
+    idade = 12;
+    console.log(voto(idade));
+
+    idade = 16;
+    console.log(voto(idade));
+
+    idade = 41;
+    console.log(voto(idade));
+
+    idade = 75;
+    console.log(voto(idade));
+
+    function voto(idade) {
+      if(idade < 16)
+        return "Idade " + idade + " anos: Não pode votar";
+      else if(idade == 16 || idade >= 70)
+        return "Idade " + idade + " anos: Voto opcional";
+      else
+        return "Idade " + idade + " anos: Voto obrigatorio";
+    }
+
+    console.log("-----------------------------");
+
+    /* ============================================= */
+
+    let n1, n2, media;
+
+    n1 = 2.5;
+    n2 = 5;
+    console.log(avalia(n1, n2));
+
+    n1 = 6;
+    n2 = 4.5;
+    console.log(avalia(n1, n2));
+
+    n1 = 7.5;
+    n2 = 5.5;
+    console.log(avalia(n1, n2));
+
+    function avalia(n1, n2){
+      media = (n1 + n2) / 2;
+
+      if(media < 4){
+        return "Média " + media + ": Reprovado";
+      } else if(media < 6) {
+        return "Média " + media + ": Em recuperação";
+      } else {
+        return "Média " + media + ": Aprovado";
+      }
+    }
+
+  </script>
+</body>
+</html>

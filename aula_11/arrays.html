@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+
+  <script>
+
+    let nomes = ["João", "José", "Maria", "Ana"];
+
+    console.log(nomes);
+    console.log(nomes.length);
+    console.log("===================");
+
+    /* método push - adiciona elemento no fim do array */
+
+    nomes.push("Carlos");
+    nomes.push("Vinicius");
+    nomes.push("Débora");
+    nomes.push("Barbara");
+
+    /* método unshift - adiciona elemento no inicio do array */
+
+    nomes.unshift("Pedro");
+    nomes.unshift("Afonso");
+    nomes.unshift("Alice");
+    nomes.unshift("Yasmin");
+
+    console.log(nomes);
+    console.log(nomes.length);
+    console.log("===================");
+
+    /* método pop - remove elemento no fim do array */
+
+    let ultimo_removido = nomes.pop();
+
+    /* método shift - remove elemento no inicio do array */
+
+    let primeiro_removido = nomes.shift();
+
+    console.log("Nome removido no ínicio do array: " + primeiro_removido);
+    console.log("Nome removido no fim do array: " + ultimo_removido);
+
+    console.log("===================");
+
+    console.log(nomes);
+    console.log(nomes.length);
+    console.log("===================");
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escopo</title>
+</head>
+<body>
+
+  <script>
+
+    let fruta;
+
+    fruta = "banana";
+    teste(fruta);
+
+    fruta = "maçã";
+    teste(fruta);
+
+    function teste(fruta){
+
+      switch(true) {
+        case (fruta == "banana"):
+          let cor = "amarela";
+          console.log(`${fruta} é uma fruta de cor ${cor}`);
+          break;
+        case (fruta == "maçã"):
+          let cor = "vermelha";  // gera erro: variável cor já foi declarada
+          console.log(`${fruta} é uma fruta de cor ${cor}`);
+          break;
+      }
+    }
+
+  </script>
+
+</body>
+</html>

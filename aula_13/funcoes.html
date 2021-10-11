@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções</title>
+</head>
+<body>
+
+  <script>
+    function somar(num1, num2, f){
+      let r = num1 + num2;
+      f(r);
+    }
+
+    let resultado = somar(50, 65, (callback) => console.log(callback));   /* quando for apenas um comando não é necessário colocar dentro de chaves */
+
+    /* =============================================== */
+
+    /* atribuindo uma função anônima a uma variável */
+
+    let sub1 = function(num1, num2){
+      return num1 - num2;
+    }
+
+    let sub2 = (num1, num2) => num1 - num2;   /* usando arrow function */
+
+    console.log(sub1(74, 21));
+    console.log(sub2(48, 19));
+
+    /* =============================================== */
+
+    let cursos = ['vanilla JS', 'VueJs', 'NodeJs', 'Angular', 'React'];
+
+    cursos.forEach( (element, index) => console.log(`${index + 1} - ${element}`) );
+
+  </script>
+</body>
+</html>
