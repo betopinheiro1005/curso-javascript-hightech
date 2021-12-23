@@ -1,5 +1,5 @@
 # Curso de Javascript  
-## High Tech (Virmerson Bento dos Santos)  
+## High Tech - Cursos Fábrica de Programador (Virmerson Bento dos Santos)  
 ### Link dos vídeos  
 <https://www.youtube.com/watch?v=PJDnz5Se9xI&list=PLKvsMn7xWutZ64gPRZ5rTNB2HEZiN1nK8>
 
